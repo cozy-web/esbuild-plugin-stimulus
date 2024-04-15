@@ -29,7 +29,7 @@ function parseControllerName(filename) {
   return null
 }
 
-export const stimulusPlugin = () => ({
+const plugin = () => ({
   name: 'stimulus',
   setup(build) {
     const namespace = 'stimulus_ns'
@@ -98,3 +98,5 @@ export const stimulusPlugin = () => ({
     })
   },
 })
+
+export default plugin

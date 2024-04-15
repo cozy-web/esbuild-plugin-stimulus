@@ -4,7 +4,7 @@ import * as fs from 'fs/promises'
 import * as os from 'os'
 import * as path from 'path'
 import * as process from 'process'
-import { stimulusPlugin } from '.'
+import plugin from '.'
 
 let workDir
 
@@ -44,7 +44,7 @@ const listDefinitions = async (files) => {
     bundle: true,
     platform: 'node',
     target: 'node14',
-    plugins: [stimulusPlugin()],
+    plugins: [plugin()],
   })
 
   return runScript(outputFile)
