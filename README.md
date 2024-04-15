@@ -20,7 +20,7 @@ In your [esbuild script](https://esbuild.github.io/getting-started/#build-script
 // build.js
 
 const esbuild = require('esbuild')
-const pluginStimulus = require('esbuild-plugin-stimulus')
+const pluginStimulus = require('@cozy-web/esbuild-plugin-stimulus')
 
 esbuild
   .build({
