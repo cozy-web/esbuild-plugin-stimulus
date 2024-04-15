@@ -1,7 +1,7 @@
 import * as path from 'path'
 import { readdir } from 'fs'
 import { promisify } from 'util'
-import glob from 'glob'
+import { globSync } from 'glob'
 
 const CONTROLLER_EXTENSIONS = ['.js', '.jsx', '.ts', '.tsx']
 
@@ -37,8 +37,8 @@ const plugin = () => ({
     build.onResolve({ filter: /^stimulus:./ }, (args) => {
       const pathArg = args.path.substring('stimulus:'.length)
       const controllerDir = path.join(args.resolveDir, pathArg.replace(/\//g, path.sep))
-      const watchDirs = [controllerDir, ...glob.sync(path.join(controllerDir, '**/*/'))]
-      const watchFiles = glob.sync(path.join(controllerDir, '**/*'), { nodir: true })
+      const watchDirs = [controllerDir, ...globSync(path.join(controllerDir, '**/*/'))]
+      const watchFiles = globSync(path.join(controllerDir, '**/*'), { nodir: true })
       return {
         path: controllerDir,
         watchDirs: watchDirs,
