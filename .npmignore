@@ -1,8 +1,2 @@
-/package.json.bak
-/esbuild-plugin-stimulus-*.tgz
-/zombiezen-esbuild-plugin-stimulus-*.tgz
-
 /.github/
-/.vscode/
 /publish.sh
-*.nix

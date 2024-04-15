@@ -20,13 +20,15 @@ In your [esbuild script][]:
 ```javascript
 // build.js
 
-const esbuild = require('esbuild');
-const { stimulusPlugin } = require('esbuild-plugin-stimulus');
+const esbuild = require('esbuild')
+const { stimulusPlugin } = require('esbuild-plugin-stimulus')
 
-esbuild.build({
-  plugins: [stimulusPlugin()],
-  // ...
-}).catch(() => process.exit(1));
+esbuild
+  .build({
+    plugins: [stimulusPlugin()],
+    // ...
+  })
+  .catch(() => process.exit(1))
 ```
 
 And in your application (similar to [using webpack][]):
@@ -34,11 +36,11 @@ And in your application (similar to [using webpack][]):
 ```javascript
 // app.js
 
-import { Application } from 'stimulus';
-import { definitions } from 'stimulus:./controllers';
+import { Application } from 'stimulus'
+import { definitions } from 'stimulus:./controllers'
 
-const app = Application.start();
-app.load(definitions);
+const app = Application.start()
+app.load(definitions)
 ```
 
 If you are using TypeScript, add a [declaration file][] like the following to
@@ -48,8 +50,8 @@ your project to provide type information for `stimulus:` imports:
 // esbuild-plugin-stimulus.d.ts
 
 declare module 'stimulus:*' {
-  import type { Definition } from '@hotwired/stimulus';
-  export const definitions: Definition[];
+  import type { Definition } from '@hotwired/stimulus'
+  export const definitions: Definition[]
 }
 ```
 
@@ -59,4 +61,4 @@ declare module 'stimulus:*' {
 
 ## License
 
-[Apache 2.0](LICENSE)
+Apache License 2.0

@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zombiezen/esbuild-plugin-stimulus.git"
+    "url": "git+https://github.com/cozy-web/esbuild-plugin-stimulus.git"
   },
   "keywords": [
     "esbuild",
@@ -17,10 +17,7 @@
     "stimulus"
   ],
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/zombiezen/esbuild-plugin-stimulus/issues"
-  },
-  "homepage": "https://github.com/zombiezen/esbuild-plugin-stimulus#readme",
+  "homepage": "https://github.com/cozy-web/esbuild-plugin-stimulus",
   "devDependencies": {
     "esbuild": "^0.17.19",
     "jest": "^27.1.1"
