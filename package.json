@@ -1,6 +1,6 @@
 {
   "name": "@cozy-web/esbuild-plugin-stimulus",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "esbuild plugin for automatically loading Stimulus controllers from a folder",
   "type": "module",
   "files": [
